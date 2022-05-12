@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML input type</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Bungee&family=Kalam:wght@300&family=Luxurious+Roman&family=Press+Start+2P&family=Saira+Condensed:wght@900&family=Vujahday+Script&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Bungee&family=Kalam:wght@300&family=Luxurious+Roman&family=Press+Start+2P&family=Saira+Condensed:wght@900&family=Ubuntu&family=Vujahday+Script&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../main_nav.css">
+    <link rel="stylesheet" href="html_content.css">
+    <link rel="stylesheet" href="intro_content.css">
+    <script src="log.js"></script>
+
+
+
+    <script>
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        // function myFunction() {
+        //     var x = document.getElementById("myTopnav");
+        //     var y = document.getElementById("mySidenav");
+        //     if (x.className === "topnav" && y.className === "sidenav") {
+        //         x.className += " responsive";
+        //         y.className += " responsive";
+        //     } else {
+        //         x.className = "topnav";
+        //         y.className = "sidenav";
+        //     }
+        // }
+
+
+        // function openNav() {
+        //     document.getElementById("mySidenav").style.width = "250px";
+        // }
+
+        // function closeNav() {
+        //     document.getElementById("mySidenav").style.width = "0";
+        // }
+
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.getElementById("myTopnav").style.marginLeft = "250px";
+            document.getElementById("Content").style.marginLeft = "270px";
+            document.getElementById("Content").style.marginTop = "20px";
+
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.getElementById("myTopnav").style.marginLeft = "0";
+            document.getElementById("Content").style.marginLeft = "20px";
+            document.getElementById("Content").style.marginTop = "20px";
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg " id="main">
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="../Main.html">
+                <h1>CODING CLUB</h1>
+            </a>
+            <button class="navbar-toggler navbar-light" style="color: black;" type="button" data-bs-toggle="collapse"
+                data-bs-target="#Mynavbar" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="Mynavbar">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item  ">
+                        <a class="btn btn-lg " href="#" role="button" data-bs-toggle="modal" data-bs-target="#Tutorials"
+                            aria-expanded="false">
+                            Tutorials
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-lg " href="#" role="button" data-bs-toggle="modal"
+                            data-bs-target="#References" aria-expanded="false">
+                            references
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-lg " href="#" role="button" data-bs-toggle="modal" data-bs-target="#Exercises"
+                            aria-expanded="false">
+                            Exercises
+                        </a>
+
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav ">
+                    <li class=" nav-item gap-2">
+                        <a class=" btn btn-lg" href="#" role="button">Paid Courses</a>
+                        <a class="btn  btn-lg " style="background-color: black; color: aqua;" href="#"
+                            role="button">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Modal for Tutorials -->
+    <div class="modal fade" id="Tutorials" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="staticBackdropLabel">Tutorials</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <h3>HTML and CSS</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="default.html">Learn HTML</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="../CSS/css_intro.html">Learn CSS</a>
+
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn RWD</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Bootstrap</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Colors</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Icons</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Graphics</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn SVG</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn How To</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h3>Javascript</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Javascript</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn jquery</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn React</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn AngularJS</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn JSON</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn AJAX</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h3>Server Side</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn SQL</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn MYSQL</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn PHP</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn ASP</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Node.js</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn GIT</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn AWS Cloud</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h3>Programming</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="../Python/Python_intro.html">Learn Python</a>
+
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Java</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn C++</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn C#</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn R</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn kotlin</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn GO</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h3>Data Analytics</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn AI</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Machine Learning</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Data Science</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn NumPy</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Pandans</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn SciPy</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Matplotlib</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Statistics</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Excel</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Google Sheets</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h3>XML Tutorials</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XML</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XML AJAX</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XML DOM</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XML DTD</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XML Schema</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XSLT </a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XPath</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XQuery</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <!-- Modal for References -->
+    <div class="modal fade" id="References" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="staticBackdropLabel">References</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <h3>HTML</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Tag Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Browser Support</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Event Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Color Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Attribute Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML SVG Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Google Maps Reference</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h3>Javascript</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">JavaScript Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML DOM Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">jQuery Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#"> AngularJS Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">AppML Reference</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h3>Server Side</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">SQL Referenece</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">MySQL Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">PHP Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">ASP Reference</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h3>CSS</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">CSS References</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">CSS Browser support</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">CSS Selector Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Icon Reference</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h3>Programming</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Python Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Java Reference</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal for Exercises -->
+    <div class="modal fade" id="Exercises" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="staticBackdropLabel">Exercises and Quizzes</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <h3>Exercises</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Exercises</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">CSS Exercises</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">JavaScript Exercises</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">SQL/MySQL Exercises</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Python Exercises</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">C++ Exercises</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h3>Quizzes</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Quiz</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">CSS Quiz</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">JavaScript Quiz</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">SQL/MySQL Quiz</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Python Quiz</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">C++ Quiz</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h3>Courses</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Course</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">CSS Course</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">JavaScript Course</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Front End Course</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">SQL Course</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">PHP Course</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Python Course</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="topnav  " id="myTopnav">
+        <a href="javascript:void(0);" class="icon" onclick="openNav()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <div id="div1">
+            <a href="../Main.html"><i class="fa fa-home"></i></a>
+            <a class="active" href="default.html">HTML</a>
+            <a href="../CSS/css_intro.html">CSS</a>
+
+            <a href="../Javascript/javascript_intro.html">Javascript</a>
+        </div>
+        <div id="div2">
+            <a href="#about">SQL</a>
+            <a href="../Python/Python_intro.html">Python</a>
+            <a href="#about">PHP</a>
+        </div>
+        <div id="div3">
+            <a href="#about">Bootstrap</a>
+            <a href="#about">Java</a>
+            <a href="#about">jQuery</a>
+            <a href="#about">C++</a>
+        </div>
+    </div>
+    <!-- The side navigation -->
+    <div class="sidenav" id="mySidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h3>HTML Tutorial</h3>
+        <a href="default.html">HTML Introduction</a>
+        <a href="editor.html">HTML Editors</a>
+        <a href="basic.html">HTML Basic</a>
+        <a href="elements.html">HTML Elements</a>
+        <a href="Attribute.html">HTML Attributes</a>
+        <a href="headings.html">HTML Headings</a>
+        <a href="paragraph.html">HTML Paragraphs</a>
+        <a href="style.html">HTML Styles</a>
+        <a href="formatting.html">HTML Formatting</a>
+        <a href="comments.html">HTML Comments</a>
+        <a href="link.html">HTML Links</a>
+        <a href="colorlink.html">Link Colors</a>
+        <a href="bookmarklink.html">Link Bookmarks</a>
+        <a href="images.html">HTML Images</a>
+        <a href="table.html">HTML Tables</a>
+        <a href="tborder.html">Table Borders</a>
+        <a href="tsize.html">Table Sizes</a>
+        <a href="theader.html">Table Headers</a>
+        <a href="padsp.html">Padding & Spacing</a>
+        <a href="colrow.html">Colspan & Rowspan</a>
+        <a href="tstyle.html">Table Styling</a>
+        <a href="tgroup.html">Table Group</a>
+        <a href="list.html">HTML Lists</a>
+        <a href="unlist.html">Unorder Lists</a>
+        <a href="olist.html">Order Lists</a>
+        <a href="otherlist.html">Other Lists</a>
+        <a href="block&inline.html">HTML Block & Inline</a>
+        <a href="classes.html">HTML Classes</a>
+        <a href="id.html">HTML Id</a>
+        <a href="iframe.html">HTML Iframes</a>
+        <a href="filepath.html">HTML File Paths</a>
+        <a href="head.html">HTML Head</a>
+        <a href="layout.html">HTML Layout</a>
+        <a href="response.html">HTML Responsive</a>
+        <a href="semantic.html">HTML Semantics</a>
+        <a href="entities.html">HTML Entities</a>
+        <a href="symbols.html">HTML Symbols</a>
+        <a href="emojis.html">HTML Emojis</a>
+        <a href="svg.html">HTML SVG</a>
+        <a href="media.html">HTML Media</a>
+        <a href="video.html">HTML Video</a>
+        <a href="audio.html">HTML Audio</a>
+        <a href="youtube.html">HTML Youtube</a>
+        <h3>HTML Forms</h3>
+        <a href="forms.html">HTML Forms</a>
+        <a href="formatt.html">HTML Form Attribute</a>
+        <a href="formele.html">HTML Form Elements</a>
+        <a class="active" href="inputtype.html">HTML Input Types</a>
+        <a href="inputatt.html">HTML Input Attributes</a>
+        <a href="inputformatt.html">HTML Input Form Attributes</a>
+        <h3>HTML Example</h3>
+        <a href="#about">HTML Exercise</a>
+        <a href="#about">HTML Quiz</a>
+    </div>
+    <!-- page content -->
+    <div class="content w3-container" id="Content">
+        <h2>HTML Input Types</h2>
+        <div class="w3-bar">
+            <a class="w3-button w3-left w3-hover-aqua " href="formele.html">&laquo; previous</a>
+            <a class="w3-button w3-right  w3-hover-aqua" href="inputatt.html">Next &raquo;</a>
+        </div>
+        <hr>
+        <p class="intro">This chapter describes the different types for the HTML <code
+                class="w3-codespan">&lt;input&gt;</code>
+            element. </p>
+        <hr>
+
+        <h3>HTML Input Types</h3>
+        <p>Here are the different input types you can use in HTML:</p>
+        <ul>
+            <li><code class="w3-codespan">&lt;input type=&quot;button&quot;&gt;</code></li>
+            <li><code class="w3-codespan">&lt;input type=&quot;checkbox&quot;&gt;</code></li>
+            <li><code class="w3-codespan">&lt;input type=&quot;color&quot;&gt;</code></li>
+            <li><code class="w3-codespan">&lt;input type=&quot;date&quot;&gt;</code></li>
+            <li><code class="w3-codespan">&lt;input type=&quot;datetime-local&quot;&gt;</code></li>
+            <li><code class="w3-codespan">&lt;input type=&quot;email&quot;&gt;</code></li>
+            <li><code class="w3-codespan">&lt;input type=&quot;file&quot;&gt;</code></li>
+            <li><code class="w3-codespan">&lt;input type=&quot;hidden&quot;&gt;</code></li>
+            <li><code class="w3-codespan">&lt;input type=&quot;image&quot;&gt;</code></li>
+            <li><code class="w3-codespan">&lt;input type=&quot;month&quot;&gt;</code></li>
+            <li><code class="w3-codespan">&lt;input type=&quot;number&quot;&gt;</code></li>
+            <li><code class="w3-codespan">&lt;input type=&quot;password&quot;&gt;</code></li>
+            <li><code class="w3-codespan">&lt;input type=&quot;radio&quot;&gt;</code></li>
+            <li><code class="w3-codespan">&lt;input type=&quot;range&quot;&gt;</code></li>
+            <li><code class="w3-codespan">&lt;input type=&quot;reset&quot;&gt;</code></li>
+            <li><code class="w3-codespan">&lt;input type=&quot;search&quot;&gt;</code></li>
+            <li><code class="w3-codespan">&lt;input type=&quot;submit&quot;&gt;</code></li>
+            <li><code class="w3-codespan">&lt;input type=&quot;tel&quot;&gt;</code></li>
+            <li><code class="w3-codespan">&lt;input type=&quot;text&quot;&gt;</code></li>
+            <li><code class="w3-codespan">&lt;input type=&quot;time&quot;&gt;</code></li>
+            <li><code class="w3-codespan">&lt;input type=&quot;url&quot;&gt;</code></li>
+            <li><code class="w3-codespan">&lt;input type=&quot;week&quot;&gt;</code></li>
+        </ul>
+
+        <div class="note">
+            <p><strong>Tip:</strong> The default value of the <code class="w3-codespan">type</code> attribute
+                is
+                &quot;text&quot;.</p>
+        </div>
+        <hr>
+
+        <h3>Input Type Text</h3>
+        <p><code class="w3-codespan">&lt;input type=&quot;text&quot;&gt;</code> defines a <strong>
+                single-line text input field</strong>:</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                &lt;form&gt;<br>
+                &nbsp; &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input
+                type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot;&gt;&lt;br&gt;<br>&nbsp; &lt;label
+                for=&quot;lname&quot;&gt;Last
+                name:&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input type=&quot;text&quot; id=&quot;lname&quot;
+                name=&quot;lname"&gt;<br>
+                &lt;/form&gt;
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <p>This is how the HTML code above will be displayed in a browser:</p>
+        First name:<br>
+        <input type="text"><br>
+        Last name:<br>
+        <input type="text"><br>
+        <hr>
+
+        <h3>Input Type Password</h3>
+        <p><code class="w3-codespan">&lt;input type=&quot;password&quot;&gt;</code> defines a <strong>password
+                field</strong>:</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                &lt;form&gt;<br>
+                &nbsp; &lt;label for=&quot;username&quot;&gt;Username:&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input
+                type=&quot;text&quot;
+                id=&quot;username&quot; name=&quot;username&quot;&gt;&lt;br&gt;<br>&nbsp; &lt;label
+                for=&quot;pwd&quot;&gt;Password:&lt;/label&gt;&lt;br&gt;<br>&nbsp;
+                &lt;input type=&quot;password&quot; id=&quot;pwd&quot; name=&quot;pwd&quot;&gt;<br>
+                &lt;/form&gt;
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <p>This is how the HTML code above will be displayed in a browser:</p>
+        Username:<br>
+        <input type="text"><br>
+        Password:<br>
+        <input type="password">
+        <div class="note">
+            <p>The characters in a password field are masked (shown as asterisks or circles).
+            </p>
+        </div>
+        <hr>
+        <h3>Input Type Submit</h3>
+        <p><code class="w3-codespan">&lt;input type="submit"&gt;</code> defines a button for <strong>
+                submitting</strong> form data to a <strong>form-handler</strong>.</p>
+        <p>The form-handler is typically a server page with a script for processing
+            input data.</p>
+        <p>The form-handler is specified in the form's <code class="w3-codespan">action</code>
+            attribute:</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                &lt;form action=&quot;/action_page.php&quot;&gt;<br>&nbsp; &lt;label for=&quot;fname&quot;&gt;First
+                name:&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input type=&quot;text&quot; id=&quot;fname&quot;
+                name=&quot;fname&quot;
+                value=&quot;John&quot;&gt;&lt;br&gt;<br>&nbsp; &lt;label for=&quot;lname&quot;&gt;Last
+                name:&lt;/label&gt;&lt;br&gt;<br>&nbsp;
+                &lt;input type=&quot;text&quot; id=&quot;lname&quot; name=&quot;lname&quot;
+                value=&quot;Doe&quot;&gt;&lt;br&gt;&lt;br&gt;<br>&nbsp;
+                &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;<br>&lt;/form&gt;
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <p>This is how the HTML code above will be displayed in a browser:</p>
+        <form action="/action_page.php" target="_blank">
+            First name:<br>
+            <input type="text" name="firstname" value="John"><br>
+            Last name:<br>
+            <input type="text" name="lastname" value="Doe">
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <p>If you omit the submit button's value attribute, the button will get a default text:</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                &lt;form action=&quot;/action_page.php&quot;&gt;<br>&nbsp; &lt;label for=&quot;fname&quot;&gt;First
+                name:&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input type=&quot;text&quot; id=&quot;fname&quot;
+                name=&quot;fname&quot;
+                value=&quot;John&quot;&gt;&lt;br&gt;<br>&nbsp; &lt;label for=&quot;lname&quot;&gt;Last
+                name:&lt;/label&gt;&lt;br&gt;<br>&nbsp;
+                &lt;input type=&quot;text&quot; id=&quot;lname&quot; name=&quot;lname&quot;
+                value=&quot;Doe&quot;&gt;&lt;br&gt;&lt;br&gt;<br>&nbsp;
+                &lt;input type=&quot;submit&quot;&gt;<br>&lt;/form&gt;
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <hr>
+
+        <h3>Input Type Reset</h3>
+        <p><code class="w3-codespan">&lt;input type="reset"&gt;</code> defines a <strong>reset button</strong>
+            that will reset all form values to their default values:</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                &lt;form action=&quot;/action_page.php&quot;&gt;<br>&nbsp; &lt;label for=&quot;fname&quot;&gt;First
+                name:&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input type=&quot;text&quot; id=&quot;fname&quot;
+                name=&quot;fname&quot;
+                value=&quot;John&quot;&gt;&lt;br&gt;<br>&nbsp; &lt;label for=&quot;lname&quot;&gt;Last
+                name:&lt;/label&gt;&lt;br&gt;<br>&nbsp;
+                &lt;input type=&quot;text&quot; id=&quot;lname&quot; name=&quot;lname&quot;
+                value=&quot;Doe&quot;&gt;&lt;br&gt;&lt;br&gt;<br>&nbsp;
+                &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;<br>&nbsp; &lt;input
+                type=&quot;reset&quot;&gt;<br>&lt;/form&gt;
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <p>This is how the HTML code above will be displayed in a browser:</p>
+        <form action="/action_page.php" target="_blank">
+            First name:<br>
+            <input type="text" name="firstname0" value="John"><br>
+            Last name:<br>
+            <input type="text" name="lastname0" value="Doe">
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="reset">
+        </form>
+        <div class="note">
+            <p>If you change the input values and then click the "Reset" button, the form-data will be reset to the
+                default values.</p>
+        </div>
+        <hr>
+
+        <h3>Input Type Radio</h3>
+        <p><code class="w3-codespan">&lt;input type=&quot;radio&quot;&gt;</code> defines a <strong>radio
+                button</strong>.</p>
+        <p>Radio buttons let a user select ONLY ONE of a limited number of choices:</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                &lt;p&gt;Choose your favorite Web language:&lt;/p&gt;<br><br>
+                &lt;form&gt;<br>&nbsp; &lt;input type=&quot;radio&quot; id=&quot;html&quot;
+                name=&quot;fav_language&quot;
+                value=&quot;HTML&quot;&gt;<br>&nbsp; &lt;label
+                for=&quot;html&quot;&gt;HTML&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input
+                type=&quot;radio&quot; id=&quot;css&quot; name=&quot;fav_language&quot;
+                value=&quot;CSS&quot;&gt;<br>&nbsp; &lt;label
+                for=&quot;css&quot;&gt;CSS&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input type=&quot;radio&quot;
+                id=&quot;javascript&quot;
+                name=&quot;fav_language&quot; value=&quot;JavaScript&quot;&gt;<br>&nbsp; &lt;label
+                for=&quot;javascript&quot;&gt;JavaScript&lt;/label&gt;<br>&lt;/form&gt;
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <p>This is how the HTML code above will be displayed in a browser:</p>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+        <hr>
+
+        <h3>Input Type Checkbox</h3>
+        <p><code class="w3-codespan">&lt;input type=&quot;checkbox&quot;&gt;</code> defines a <strong>checkbox</strong>.
+        </p>
+        <p>Checkboxes let a user select ZERO or MORE options of a limited number of choices.</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                &lt;form&gt;<br>&nbsp; &lt;input type=&quot;checkbox&quot; id=&quot;vehicle1&quot;
+                name=&quot;vehicle1&quot; value=&quot;Bike&quot;&gt;<br>&nbsp;
+                &lt;label for=&quot;vehicle1&quot;&gt; I have a bike&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input
+                type=&quot;checkbox&quot; id=&quot;vehicle2&quot; name=&quot;vehicle2&quot;
+                value=&quot;Car&quot;&gt;<br>&nbsp; &lt;label for=&quot;vehicle2&quot;&gt;
+                I have a car&lt;/label&gt;&lt;br&gt;<br>&nbsp; &lt;input type=&quot;checkbox&quot;
+                id=&quot;vehicle3&quot; name=&quot;vehicle3&quot;
+                value=&quot;Boat&quot;&gt;<br>&nbsp; &lt;label for=&quot;vehicle3&quot;&gt; I have a
+                boat&lt;/label&gt;<br>
+                &lt;/form&gt;
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <p>This is how the HTML code above will be displayed in a browser:</p>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I have a car</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I have a boat</label>
+        <hr>
+
+        <h3>Input Type Button</h3>
+        <p><code class="w3-codespan">&lt;input type=&quot;button&quot;&gt;</code> defines a <strong>button</strong>:</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                &lt;input type=&quot;button&quot; onclick=&quot;alert('Hello World!')&quot; value=&quot;Click
+                Me!&quot;&gt;</div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <p>This is how the HTML code above will be displayed in a browser:</p>
+        <input type="button" onclick="alert('Hello World!')" value="Click Me!">
+        <hr>
+
+        <h3>Input Type Color</h3>
+        <p>The <code class="w3-codespan">&lt;input type=&quot;color&quot;&gt;</code> is used for input fields that
+            should contain a color.</p>
+        <p>Depending on browser support, a color picker can show up in the input field.</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                &lt;form&gt;<br>&nbsp; &lt;label for=&quot;favcolor&quot;&gt;Select your favorite
+                color:&lt;/label&gt;<br>&nbsp; &lt;input type=&quot;color&quot; id=&quot;favcolor&quot;
+                name=&quot;favcolor&quot;&gt;<br>
+                &lt;/form&gt;</div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <hr>
+
+        <h3>Input Type Date</h3>
+        <p>The <code class="w3-codespan">&lt;input type=&quot;date&quot;&gt;</code> is used for input fields that should
+            contain a date.</p>
+        <p>Depending on browser support, a date picker can show up in the input field.</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                &lt;form&gt;<br>&nbsp; &lt;label for=&quot;birthday&quot;&gt;Birthday:&lt;/label&gt;<br>&nbsp; &lt;input
+                type=&quot;date&quot; id=&quot;birthday&quot; name=&quot;birthday&quot;&gt;<br>&lt;/form&gt;</div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+
+        <p>You can also use the <code class="w3-codespan">min</code> and <code class="w3-codespan">max</code> attributes
+            to add restrictions to dates:</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                &lt;form&gt;<br>&nbsp; &lt;label for=&quot;datemax&quot;&gt;Enter a date before
+                1980-01-01:&lt;/label&gt;<br>&nbsp; &lt;input type=&quot;date&quot; id=&quot;datemax&quot;
+                name=&quot;datemax&quot;
+                max=&quot;1979-12-31&quot;&gt;&lt;br&gt;&lt;br&gt;<br>&nbsp; &lt;label for=&quot;datemin&quot;&gt;Enter
+                a date after
+                2000-01-01:&lt;/label&gt;<br>&nbsp; &lt;input type=&quot;date&quot; id=&quot;datemin&quot;
+                name=&quot;datemin&quot;
+                min=&quot;2000-01-02&quot;&gt;<br>&lt;/form&gt;</div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <hr>
+
+        <h3>Input Type Datetime-local</h3>
+        <p>The <code class="w3-codespan">&lt;input type=&quot;datetime-local&quot;&gt;</code> specifies
+            a date and time input field, with no time zone.</p>
+        <p>Depending on browser support, a date picker can show up in the input field.</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                &lt;form&gt;<br>&nbsp; &lt;label for=&quot;birthdaytime&quot;&gt;Birthday (date and
+                time):&lt;/label&gt;<br>&nbsp; &lt;input type=&quot;datetime-local&quot; id=&quot;birthdaytime&quot;
+                name=&quot;birthdaytime&quot;&gt;<br>
+                &lt;/form&gt;</div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <hr>
+
+        <h3>Input Type Email</h3>
+        <p>The <code class="w3-codespan">&lt;input type=&quot;email&quot;&gt;</code> is used for input fields that
+            should contain an e-mail address.</p>
+        <p>Depending on browser support, the e-mail address can be automatically validated when submitted.</p>
+        <p>Some smartphones recognize the email type, and add &quot;.com&quot; to the keyboard to match email input.</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                &lt;form&gt;<br>&nbsp; &lt;label for=&quot;email&quot;&gt;Enter your email:&lt;/label&gt;<br>&nbsp;
+                &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot;&gt;<br>
+                &lt;/form&gt;</div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <hr>
+
+        <h3>Input Type File</h3>
+        <p>The <code class="w3-codespan">&lt;input type=&quot;file&quot;&gt;</code>
+            defines a file-select field and a &quot;Browse&quot; button for file uploads.</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                &lt;form&gt;<br>&nbsp; &lt;label for=&quot;myfile&quot;&gt;Select a file:&lt;/label&gt;<br>&nbsp;
+                &lt;input type=&quot;file&quot; id=&quot;myfile&quot; name=&quot;myfile&quot;&gt;<br>&lt;/form&gt;</div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <hr>
+
+
+        <h3>Input Type Hidden</h3>
+        <p>The <code class="w3-codespan">&lt;input type=&quot;hidden&quot;&gt;</code>
+            defines a hidden input field (not visible to a user).</p>
+        <p>A hidden field let web developers include data that cannot be seen or
+            modified by users when a form is submitted.</p>
+        <p>A hidden field often stores what database record that needs to be updated
+            when the form is submitted.</p>
+        <p><strong>Note:</strong> While the value is not displayed to the user in the
+            page's content, it is visible (and can be edited) using any browser's developer
+            tools or &quot;View Source&quot; functionality. Do not use hidden inputs as a form of
+            security!</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                &lt;form&gt;<br>&nbsp; &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;<br>&nbsp;
+                &lt;input type=&quot;text&quot; id=&quot;fname&quot;
+                name=&quot;fname&quot;&gt;&lt;br&gt;&lt;br&gt;<br>&nbsp; &lt;input
+                type=&quot;hidden&quot; id=&quot;custId&quot; name=&quot;custId&quot;
+                value=&quot;3487&quot;&gt;<br>&nbsp; &lt;input
+                type=&quot;submit&quot; value=&quot;Submit&quot;&gt;<br>&lt;/form&gt;</div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <hr>
+
+
+        <h3>Input Type Month</h3>
+        <p>The <code class="w3-codespan">&lt;input type=&quot;month&quot;&gt;</code> allows the user to select a month
+            and year.</p>
+        <p>Depending on browser support, a date picker can show up in the input field.</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                &lt;form&gt;<br>&nbsp; &lt;label for=&quot;bdaymonth&quot;&gt;Birthday (month and
+                year):&lt;/label&gt;<br>&nbsp; &lt;input type=&quot;month&quot; id=&quot;bdaymonth&quot;
+                name=&quot;bdaymonth&quot;&gt;<br>
+                &lt;/form&gt;</div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <hr>
+
+        <h3>Input Type Number</h3>
+        <p>The <code class="w3-codespan">&lt;input type=&quot;number&quot;&gt;</code> defines a <strong>
+                numeric</strong> input field.</p>
+        <p>You can also set restrictions on what numbers are accepted.</p>
+        <p>The following example displays a numeric input field, where you can enter a value from 1 to 5:</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                &lt;form&gt;<br>&nbsp; &lt;label for=&quot;quantity&quot;&gt;Quantity (between 1 and
+                5):&lt;/label&gt;<br>&nbsp; &lt;input type=&quot;number&quot; id=&quot;quantity&quot;
+                name=&quot;quantity&quot;
+                min=&quot;1&quot; max=&quot;5&quot;&gt;<br>&lt;/form&gt;</div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <hr>
+
+        <h3>Input Restrictions</h3>
+        <p>Here is a list of some common input restrictions:</p>
+        <table class="table">
+            <tr>
+                <th style="width:20%">Attribute</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>checked</td>
+                <td>Specifies that an input field should be pre-selected when the page loads (for
+                    type=&quot;checkbox&quot; or type=&quot;radio&quot;)</td>
+            </tr>
+            <tr>
+                <td>disabled</td>
+                <td>Specifies that an input field should be disabled</td>
+            </tr>
+            <tr>
+                <td>max</td>
+                <td>Specifies the maximum value for an input field</td>
+            </tr>
+            <tr>
+                <td>maxlength</td>
+                <td>Specifies the maximum number of character for an input field</td>
+            </tr>
+            <tr>
+                <td>min</td>
+                <td>Specifies the minimum value for an input field</td>
+            </tr>
+            <tr>
+                <td>pattern</td>
+                <td>Specifies a regular expression to check the input value against</td>
+            </tr>
+            <tr>
+                <td>readonly</td>
+                <td>Specifies that an input field is read only (cannot be changed)</td>
+            </tr>
+            <tr>
+                <td>required</td>
+                <td>Specifies that an input field is required (must be filled out)</td>
+            </tr>
+            <tr>
+                <td>size</td>
+                <td>Specifies the width (in characters) of an input field</td>
+            </tr>
+            <tr>
+                <td>step</td>
+                <td>Specifies the legal number intervals for an input field</td>
+            </tr>
+            <tr>
+                <td>value</td>
+                <td>Specifies the default value for an input field</td>
+            </tr>
+        </table>
+        <p>
+            You will learn more about input restrictions in the next chapter.</p>
+        <p>
+            The following example displays a numeric input field, where you can enter a
+            value from 0 to 100, in steps of 10. The default value is 30:</p>
+
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                &lt;form&gt;<br>&nbsp; &lt;label for=&quot;quantity&quot;&gt;Quantity:&lt;/label&gt;<br>&nbsp; &lt;input
+                type=&quot;number&quot; id=&quot;quantity&quot; name=&quot;quantity&quot; min=&quot;0&quot;
+                max=&quot;100&quot; step=&quot;10&quot;
+                value=&quot;30&quot;&gt;<br>&lt;/form&gt;</div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <hr>
+
+        <h3>Input Type Range</h3>
+        <p>The <code class="w3-codespan">&lt;input type=&quot;range&quot;&gt;</code> defines a control for entering a
+            number whose exact value is not important (like a slider control). Default
+            range is 0 to 100. However, you can set restrictions on what
+            numbers are accepted with the <code class="w3-codespan">min</code>, <code class="w3-codespan">max</code>,
+            and <code class="w3-codespan">step</code> attributes:</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                &lt;form&gt;<br>&nbsp; &lt;label for=&quot;vol&quot;&gt;Volume (between 0 and
+                50):&lt;/label&gt;<br>&nbsp;
+                &lt;input type=&quot;range&quot; id=&quot;vol&quot; name=&quot;vol&quot; min=&quot;0&quot;
+                max=&quot;50&quot;&gt;<br>
+                &lt;/form&gt;</div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <hr>
+
+        <h3>Input Type Search</h3>
+        <p>The <code class="w3-codespan">&lt;input type=&quot;search&quot;&gt;</code> is used for search fields (a
+            search field behaves like a regular text field).</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                &lt;form&gt;<br>&nbsp; &lt;label for=&quot;gsearch&quot;&gt;Search Google:&lt;/label&gt;<br>&nbsp;
+                &lt;input type=&quot;search&quot; id=&quot;gsearch&quot; name=&quot;gsearch&quot;&gt;<br>
+                &lt;/form&gt;</div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <hr>
+
+        <h3>Input Type Tel</h3>
+        <p>The <code class="w3-codespan">&lt;input type=&quot;tel&quot;&gt;</code> is used for input fields that should
+            contain a telephone number.</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                &lt;form&gt;<br>&nbsp; &lt;label for=&quot;phone&quot;&gt;Enter your phone
+                number:&lt;/label&gt;<br>&nbsp;
+                &lt;input type=&quot;tel&quot; id=&quot;phone&quot; name=&quot;phone&quot;
+                pattern=&quot;[0-9]{3}-[0-9]{2}-[0-9]{3}&quot;&gt;<br>&lt;/form&gt;</div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <hr>
+
+        <h3>Input Type Time</h3>
+        <p>The <code class="w3-codespan">&lt;input type=&quot;time&quot;&gt;</code> allows the user to select a time (no
+            time zone).</p>
+        <p>Depending on browser support, a time picker can show up in the input field.</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                &lt;form&gt;<br>&nbsp; &lt;label for=&quot;appt&quot;&gt;Select a time:&lt;/label&gt;<br>&nbsp;
+                &lt;input type=&quot;time&quot; id=&quot;appt&quot; name=&quot;appt&quot;&gt;<br>
+                &lt;/form&gt;</div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <hr>
+
+        <h3>Input Type Url</h3>
+        <p>The <code class="w3-codespan">&lt;input type=&quot;url&quot;&gt;</code> is used for input fields that should
+            contain a URL address.</p>
+        <p>Depending on browser support, the url field can be automatically validated
+            when submitted.</p>
+        <p>Some smartphones recognize the url type, and adds &quot;.com&quot; to the keyboard to match
+            url input.</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                &lt;form&gt;<br>&nbsp; &lt;label for=&quot;homepage&quot;&gt;Add your homepage:&lt;/label&gt;<br>&nbsp;
+                &lt;input type=&quot;url&quot; id=&quot;homepage&quot; name=&quot;homepage&quot;&gt;<br>
+                &lt;/form&gt;</div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <hr>
+
+        <h3>Input Type Week</h3>
+        <p>The <code class="w3-codespan">&lt;input type=&quot;week&quot;&gt;</code> allows the user to select a week and
+            year.</p>
+        <p>Depending on browser support, a date picker can show up in the input field.</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                &lt;form&gt;<br>&nbsp; &lt;label for=&quot;week&quot;&gt;Select a week:&lt;/label&gt;<br>&nbsp;
+                &lt;input type=&quot;week&quot; id=&quot;week&quot; name=&quot;week&quot;&gt;<br>
+                &lt;/form&gt;</div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>

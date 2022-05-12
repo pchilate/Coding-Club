@@ -1,0 +1,152 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <!-- <table border="1" style=" width: 30%; height: 150px; text-align: center;">
+        <caption>My Time Table</caption>
+        <tr>
+            <th rowspan="2">Day</th>
+            <th colspan="2"> Session</th>
+
+
+        </tr>
+        <tr>
+            <th>Schedule</th>
+            <th>Course Name</th>
+
+
+        </tr>
+        <tr>
+            <td>Sunday</td>
+            <td>16:00-16:50</td>
+            <td>Web Technology</td>
+
+        </tr>
+        <tr>
+            <td>Sunday</td>
+            <td>17:00-17:50</td>
+            <td>Network Management</td>
+
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>18:00-18:50</td>
+            <td>IT Project Management</td>
+
+        </tr>
+    </table> -->
+
+<!-- <b>Course Details</b>
+    <ol type="1">
+        <li>Complete Course</li>
+        <ol type="a">
+            <li>Basic Computer Training</li>
+            <li>Diploma in Computer Application</li>
+        </ol>
+        <li>Crash Course</li>
+        <ul type="disc">
+            <li>Accounting Course</li>
+            <li>E-banking Course</li>
+        </ul>
+        <li>Other Course</li>
+        <ol type="i">
+            <li>Secretariat Training</li>
+            <li>Photography Training</li>
+        </ol>
+    </ol>
+</body>
+
+</html> --> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        /* animation created using from{} and to{}  */
+        @keyframes animation1 {
+            from {
+                width: 300px;
+                height: 300px;
+
+            }
+
+            to {
+                width: 500px;
+                height: 250px;
+            }
+
+        }
+
+        /* animation created using 0%{} to 100%{}  */
+        @keyframes animation2 {
+            0% {
+                width: 300px;
+                height: 300px;
+            }
+
+            25% {
+                width: 500px;
+                height: 250px;
+                border: dashed;
+                background-color: rgb(12, 236, 31);
+                transform: translate(100px, 200px)
+            }
+
+            50% {
+                width: 800px;
+                height: 200px;
+                background-color: rgba(rgb(231, 138, 17), rgb(20, 145, 218), rgb(63, 243, 198), 0.5);
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                transform: translate(200px, 300px);
+            }
+
+            75% {
+                width: 1000px;
+                height: 150px;
+                background-color: rgb(247, 126, 176);
+                font-weight: bold;
+                transform: translate(300px, 400px);
+
+            }
+
+            100% {
+                width: 300px;
+                height: 300px;
+                background-color: rgb(252, 252, 190);
+                font-family: myfont;
+                transform: translate(400px, 500px);
+            }
+
+
+        }
+
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: chartreuse;
+            border: solid;
+            animation: animation2 5s 1s 5 alternate
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p> This is @keyframe animation</p>
+    </div>
+</body>
+
+</html>

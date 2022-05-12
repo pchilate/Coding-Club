@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Variables</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Bungee&family=Kalam:wght@300&family=Luxurious+Roman&family=Press+Start+2P&family=Saira+Condensed:wght@900&family=Vujahday+Script&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Bungee&family=Kalam:wght@300&family=Luxurious+Roman&family=Press+Start+2P&family=Saira+Condensed:wght@900&family=Ubuntu&family=Vujahday+Script&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../main_nav.css">
+    <link rel="stylesheet" href="html_content.css">
+    <link rel="stylesheet" href="intro_content.css">
+    <script src="log.js"></script>
+
+
+
+    <script>
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        // function myFunction() {
+        //     var x = document.getElementById("myTopnav");
+        //     var y = document.getElementById("mySidenav");
+        //     if (x.className === "topnav" && y.className === "sidenav") {
+        //         x.className += " responsive";
+        //         y.className += " responsive";
+        //     } else {
+        //         x.className = "topnav";
+        //         y.className = "sidenav";
+        //     }
+        // }
+
+
+        // function openNav() {
+        //     document.getElementById("mySidenav").style.width = "250px";
+        // }
+
+        // function closeNav() {
+        //     document.getElementById("mySidenav").style.width = "0";
+        // }
+
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.getElementById("myTopnav").style.marginLeft = "250px";
+            document.getElementById("Content").style.marginLeft = "270px";
+            document.getElementById("Content").style.marginTop = "20px";
+
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.getElementById("myTopnav").style.marginLeft = "0";
+            document.getElementById("Content").style.marginLeft = "20px";
+            document.getElementById("Content").style.marginTop = "20px";
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg " id="main">
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="../Main.html">
+                <h1>CODING CLUB</h1>
+            </a>
+            <button class="navbar-toggler navbar-light" style="color: black;" type="button" data-bs-toggle="collapse"
+                data-bs-target="#Mynavbar" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="Mynavbar">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item  ">
+                        <a class="btn btn-lg " href="#" role="button" data-bs-toggle="modal" data-bs-target="#Tutorials"
+                            aria-expanded="false">
+                            Tutorials
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-lg " href="#" role="button" data-bs-toggle="modal"
+                            data-bs-target="#References" aria-expanded="false">
+                            references
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-lg " href="#" role="button" data-bs-toggle="modal" data-bs-target="#Exercises"
+                            aria-expanded="false">
+                            Exercises
+                        </a>
+
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav ">
+                    <li class=" nav-item gap-2">
+                        <a class=" btn btn-lg" href="#" role="button">Paid Courses</a>
+                        <a class="btn  btn-lg " style="background-color: black; color: aqua;" href="#"
+                            role="button">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Modal for Tutorials -->
+    <div class="modal fade" id="Tutorials" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="staticBackdropLabel">Tutorials</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <h3>HTML and CSS</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="../HTML/default.html">Learn HTML</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="../CSS/css_intro.html">Learn CSS</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn RWD</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Bootstrap</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Colors</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Icons</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Graphics</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn SVG</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn How To</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h3>Javascript</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="javascript_intro.html">Learn Javascript</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn jquery</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn React</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn AngularJS</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn JSON</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn AJAX</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h3>Server Side</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn SQL</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn MYSQL</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn PHP</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn html</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Node.js</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn GIT</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn AWS Cloud</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h3>Programming</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="../Python/Python_intro.html">Learn Python</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Java</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn C++</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn C#</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn R</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn kotlin</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn GO</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h3>Data Analytics</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn AI</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Machine Learning</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Data Science</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn NumPy</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Pandans</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn SciPy</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Matplotlib</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Statistics</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Excel</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Google Sheets</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h3>XML Tutorials</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XML</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XML AJAX</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XML DOM</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XML DTD</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XML Schema</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XSLT </a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XPath</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XQuery</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <!-- Modal for References -->
+    <div class="modal fade" id="References" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="staticBackdropLabel">References</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <h3>HTML</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Tag Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Browser Support</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Event Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Color Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Attribute Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML SVG Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Google Maps Reference</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h3>Javascript</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">JavaScript Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML DOM Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">jQuery Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#"> AngularJS Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">AppML Reference</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h3>Server Side</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">SQL Referenece</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">MySQL Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">PHP Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">html Reference</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h3>CSS</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">CSS References</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">CSS Browser support</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">CSS Selector Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Icon Reference</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h3>Programming</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Python Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Java Reference</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal for Exercises -->
+    <div class="modal fade" id="Exercises" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="staticBackdropLabel">Exercises and Quizzes</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <h3>Exercises</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Exercises</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">CSS Exercises</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">JavaScript Exercises</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">SQL/MySQL Exercises</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Python Exercises</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">C++ Exercises</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h3>Quizzes</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Quiz</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">CSS Quiz</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">JavaScript Quiz</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">SQL/MySQL Quiz</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Python Quiz</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">C++ Quiz</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h3>Courses</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Course</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">CSS Course</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">JavaScript Course</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Front End Course</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">SQL Course</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">PHP Course</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Python Course</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="topnav  " id="myTopnav">
+        <a href="javascript:void(0);" class="icon" onclick="openNav()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <div id="div1">
+            <a href="../Main.html"><i class="fa fa-home"></i></a>
+            <a href="../HTML/default.html">HTML</a>
+            <a href="../CSS/css_intro.html">CSS</a>
+            <a class="active" href="javascript_intro.html">Javascript</a>
+        </div>
+        <div id="div2">
+            <a href="#about">SQL</a>
+            <a href="../Python/Python_intro.html">Python</a>
+            <a href="#about">PHP</a>
+        </div>
+        <div id="div3">
+            <a href="#about">Bootstrap</a>
+            <a href="#about">Java</a>
+            <a href="#about">jQuery</a>
+            <a href="#about">C++</a>
+        </div>
+
+    </div>
+    <!-- The side navigation -->
+    <div class="sidenav" id="mySidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h3>Javascript Tutorial</h3>
+        <a href="javascript_intro.html">JS Introduction</a>
+        <a href="js_whereto.html">JS Where To</a>
+        <a href="js_output.html">JS Output</a>
+        <a href="js_statements.html">JS Statements</a>
+        <a href="js_syntax.html">JS Syntax</a>
+        <a href="js_comments.html">JS Comments</a>
+        <a class="active" href="js_variables.html">JS Variables</a>
+        <a href="js_let.html">JS Let</a>
+        <a href="js_const.html">JS Const</a>
+        <a href="js_operators.html">JS Operators</a>
+        <a href="js_arithmetic.html">JS Arithmetic</a>
+        <a href="js_assignment.html">JS Assignment</a>
+        <a href="js_datatypes.html">JS Data Types</a>
+        <a href="js_functions.html">JS Functions</a>
+        <a href="js_objects.html">JS Objects</a>
+        <a href="js_events.html">JS Events</a>
+        <a href="js_strings.html">JS Strings</a>
+        <a href="js_string_methods.html">JS String Methods</a>
+        <a href="js_string_search.html">JS String Search</a>
+        <a href="js_string_templates.html">JS String Templates</a>
+        <a href="js_numbers.html">JS Numbers</a>
+        <a href="js_number_methods.html">JS Number Methods</a>
+        <a href="js_arrays.html">JS Arrays</a>
+        <a href="js_array_methods.html">JS Array Methods</a>
+        <a href="js_array_sort.html">JS Array Sort</a>
+        <a href="js_array_iteration.html">JS Array Iteration</a>
+        <a href="js_array_const.html">JS Array Const</a>
+        <a href="js_dates.html">JS Dates</a>
+        <a href="js_date_formats.html">JS Date Formats</a>
+        <a href="js_date_methods.html">JS Date Get Methods</a>
+        <a href="js_date_methods_set.html">JS Date Set Methods</a>
+        <a href="js_math.html">JS Math</a>
+        <a href="js_random.html">JS Random</a>
+        <a href="js_booleans.html">JS Booleans</a>
+        <a href="js_comparisons.html">JS Comparisons</a>
+        <a href="js_if_else.html">JS Conditions</a>
+        <a href="js_switch.html">JS Switch</a>
+        <a href="js_loop_for.html">JS Loop For</a>
+        <a href="js_loop_forin.html">JS Loop For In</a>
+        <a href="js_loop_forof.html">JS Loop For Of</a>
+        <a href="js_loop_while.html">JS Loop While</a>
+        <a href="js_break.html">JS Break</a>
+        <a href="js_iterables.html">JS Iterables</a>
+        <a href="js_sets.html">JS Sets</a>
+        <a href="js_maps.html">JS Maps</a>
+        <a href="js_typeof.html">JS Typeof</a>
+        <a href="js_type_conversion.html">JS Type Conversion</a>
+        <a href="js_bitwise.html">JS Bitwise</a>
+        <a href="js_regexp.html">JS RegExp</a>
+        <a href="js_errors.html">JS Errors</a>
+        <a href="js_scope.html">JS Scope</a>
+        <a href="js_hoisting.html">JS Hoisting</a>
+        <a href="js_strict.html">JS Strict Mode</a>
+        <a href="js_this.html">JS this Keyword</a>
+        <a href="js_arrow_function.html">JS Arrow Function</a>
+        <a href="js_classes.html">JS Classes</a>
+        <a href="js_json.html">JS JSON</a>
+        <a href="js_debugging.html">JS Debugging</a>
+        <a href="js_conventions.html">JS Style Guide</a>
+        <a href="js_best_practices.html">JS Best Practices</a>
+        <a href="js_mistakes.html">JS Mistakes</a>
+        <a href="js_performance.html">JS Performance</a>
+        <a href="js_reserved.html">JS Reserved Words</a>
+        <h3>Javascript Object</h3>
+        <a href="js_object_definition.html">Object Definitions</a>
+        <a href="js_object_properties.html">Object Properties</a>
+        <a href="js_object_methods.html">Object Methods</a>
+        <a href="js_object_display.html">Object Display</a>
+        <a href="js_object_accessors.html">Object Accessors</a>
+        <a href="js_object_constructors.html">Object Constructors</a>
+        <a href="js_object_prototypes.html">Object Prototypes</a>
+        <a href="js_object_iterables.html">Object Iterables</a>
+        <a href="js_object_sets.html">Object Sets</a>
+        <a href="js_object_maps.html">Object Maps</a>
+        <a href="js_object_es5.html">Object Reference</a>
+        <h3>Javascript Function</h3>
+        <a href="js_function_definition.html">Function Definitions</a>
+        <a href="js_function_parameters.html">Function Parameters</a>
+        <a href="js_function_invocation.html">Function Invocation</a>
+        <a href="js_function_call.html">Function Call</a>
+        <a href="js_function_apply.html">Function Apply</a>
+        <a href="js_function_closures.html">Function Closures</a>
+        <h3>Javascript Example</h3>
+        <a href="js_examples.html">JS Examples</a>
+        <a href="js_dom_examples.html">JS HTML DOM</a>
+        <a href="js_input_examples.html">JS HTML Input</a>
+        <a href="js_ex_dom.html">JS HTML Objects</a>
+        <a href="js_events_examples.html">JS HTML Events</a>
+        <a href="js_ex_browser.html">JS Browser</a>
+        <a href="js_editor.html">JS Editor</a>
+        <a href="js_exercises.html">JS Exercises</a>
+        <a href="js_quiz.html">JS Quiz</a>
+        <a href="js_exam.html">JS Certificate</a>
+
+
+
+
+
+
+    </div>
+    <!-- page content -->
+    <div class="content w3-container" id="Content">
+        <h2>Javascript variables</h2>
+        <div class="w3-bar">
+            <a class="w3-button w3-left w3-hover-aqua " href="js_comments.html">&laquo; Previous</a>
+            <a class="w3-button w3-right  w3-hover-aqua" href="js_let.html">Next &raquo;</a>
+        </div>
+        <hr>
+        <h3>4 Ways to Declare a JavaScript Variable:</h3>
+        <ul>
+            <li>Using <code class="w3-codespan">var</code></li>
+            <li>Using <code class="w3-codespan">let</code></li>
+            <li>Using <code class="w3-codespan">const</code></li>
+            <li>Using nothing</li>
+        </ul>
+
+
+        <h3>What are Variables?</h3>
+        <p>Variables are containers for storing data (storing data values).</p>
+        <p>In this example, <code class="w3-codespan">x</code>, <code class="w3-codespan">y</code>, and <code
+                class="w3-codespan">z</code>,
+            are variables, declared with the <code class="w3-codespan">var</code> keyword:</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                var x = 5;<br>var y = 6;<br>
+                var z = x + y;
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+
+        <p>In this example, <code class="w3-codespan">x</code>, <code class="w3-codespan">y</code>, and <code
+                class="w3-codespan">z</code>,
+            are variables, declared with the <code class="w3-codespan">let</code> keyword:</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                let x = 5;<br>
+                let y = 6;<br>
+                let z = x + y;
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <p>In this example, <code class="w3-codespan">x</code>, <code class="w3-codespan">y</code>, and <code
+                class="w3-codespan">z</code>,
+            are undeclared variables:</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                x = 5;<br>
+                y = 6;<br>
+                z = x + y;
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <p>From all the examples above, you can guess:</p>
+        <ul>
+            <li>x stores the value 5</li>
+            <li>y stores the value 6</li>
+            <li>z stores the value 11</li>
+        </ul>
+
+        <hr>
+        <div class="note" style="height: fit-content;">
+            <h3>When to Use JavaScript var?</h3>
+            <p>Always declare JavaScript variables with <code class="w3-codespan">var</code>,<code
+                    class="w3-codespan">let</code>,
+                or<code class="w3-codespan">const</code>.</p>
+            <p>The <code class="w3-codespan">var</code> keyword is used in all JavaScript code from 1995 to 3015.</p>
+            <p>The <code class="w3-codespan">let</code> and <code class="w3-codespan">const</code> keywords were added
+                to JavaScript in 3015.</p>
+            <p>If you want your code to run in older browser, you must use <code class="w3-codespan">var</code>.</p>
+        </div>
+        <hr>
+        <h3>When to Use JavaScript const?</h3>
+        <p>If you want a general rule: always declare variables with <code class="w3-codespan">const</code>.</p>
+        <p>If you think the value of the variable can change, use <code class="w3-codespan">let</code>.</p>
+        <p>In this example, <code class="w3-codespan">price1</code>, <code class="w3-codespan">price3</code>, and <code
+                class="w3-codespan">total</code>, are variables:</p>
+
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                const price1 = 5;<br>
+                const price3 = 6;<br>
+                let total = price1 + price3;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+
+        <p>The two variables <code class="w3-codespan">price1</code> and <code class="w3-codespan">price3</code>
+            are declared with the <code class="w3-codespan">const</code> keyword.</p>
+        <p>These are constant values and cannot be changed.</p>
+        <p>The variable <code class="w3-codespan">total</code> is declared with the <code class="w3-codespan">let</code>
+            keyword.</p>
+        <p>This is a value that can be changed.</p>
+
+        <hr>
+        <h3>Just Like Algebra</h3>
+
+        <p>Just like in algebra, variables hold values:</p>
+        <div class="w3-example" style="height: fit-content;">
+            <div class="w3-code ">
+                let x = 5;<br>
+                let y = 6;
+            </div>
+        </div>
+        <p>Just like in algebra, variables are used in expressions:</p>
+        <div class="w3-example" style="height: fit-content;">
+            <div class="w3-code ">
+                let z = x + y;
+            </div>
+        </div>
+        <p>From the example above, you can guess that the total is calculated to be 11.</p>
+        <div class="note" style="height: fit-content;">
+            <h3>Note</h3>
+            <p>Variables are containers for storing values.</p>
+        </div>
+        <hr>
+
+        <h3>JavaScript Identifiers</h3>
+        <p>All JavaScript <strong>variables</strong> must be
+            <strong>identified</strong> with <strong>unique names</strong>.
+        </p>
+        <p>These unique names are called <strong>identifiers</strong>.</p>
+
+        <p>Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).</p>
+        <p>The general rules for constructing names for variables (unique identifiers) are:</p>
+        <ul>
+            <li>Names can contain letters, digits, underscores, and dollar signs.</li>
+            <li>Names must begin with a letter</li>
+            <li>Names can also begin with $ and _ (but we will not use it in this tutorial)</li>
+            <li>Names are case sensitive (y and Y are different variables)</li>
+            <li>Reserved words (like JavaScript keywords) cannot be used as names</li>
+        </ul>
+
+        <div class="note" style="height: fit-content;">
+            <h3>Note</h3>
+            <p>JavaScript identifiers are case-sensitive.</p>
+        </div>
+
+        <hr>
+        <h3>The Assignment Operator</h3>
+        <p>In JavaScript, the equal sign (<code class="w3-codespan">=</code>) is an &quot;assignment&quot; operator, not
+            an
+            &quot;equal to&quot; operator.</p>
+        <p>This is different from algebra. The following does not make sense in
+            algebra:</p>
+
+        <div class="w3-example" style="height: fit-content;">
+            <div class="w3-code ">
+                x = x + 5
+            </div>
+        </div>
+        <p>In JavaScript, however, it makes perfect sense: it assigns the value of x + 5 to
+            x.</p>
+        <p>(It calculates the value of x + 5 and puts the result into x. The value of x
+            is incremented by 5.)</p>
+
+        <div class="note" style="height: fit-content;">
+            <h3>Note</h3>
+            <p>The &quot;equal to&quot; operator is written like <code class="w3-codespan">==</code> in JavaScript.</p>
+        </div>
+
+        <hr>
+        <h3>JavaScript Data Types</h3>
+        <p>JavaScript variables can hold numbers like 100 and text values like &quot;John
+            Doe&quot;.</p>
+        <p>In programming, text values are called text strings.</p>
+        <p>JavaScript can handle many types of data, but for now, just think of numbers and strings. </p>
+
+        <p>Strings are written inside double or single quotes. Numbers are written
+            without quotes.</p>
+        <p>If you put a number in quotes, it will be treated as a text string.</p>
+
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                const pi = 3.14;<br>
+                let person = &quot;John Doe&quot;;<br>
+                let answer = 'Yes I am!';
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <hr>
+
+        <h3>Declaring a JavaScript Variable</h3>
+        <p>Creating a variable in JavaScript is called &quot;declaring&quot; a variable. </p>
+        <p>You declare a JavaScript variable with the <code class="w3-codespan">var</code> or the <code
+                class="w3-codespan">let</code> keyword:</p>
+
+        <div class="w3-example" style="height: fit-content;">
+            <div class="w3-code ">
+                var carName;
+            </div>
+            or:
+            <div class="w3-code ">
+                let carName;
+            </div>
+        </div>
+
+        <p>After the declaration, the variable has no value (technically it is <code
+                class="w3-codespan">undefined</code>).</p>
+        <p>To <strong>assign</strong> a value to the variable, use the equal sign:</p>
+
+        <div class="w3-example" style="height: fit-content;">
+            <div class="w3-code ">
+                carName = "Volvo";
+            </div>
+        </div>
+
+        <p>You can also assign a value to the variable when you declare it:</p>
+
+        <div class="w3-example" style="height: fit-content;">
+            <div class="w3-code ">
+                let carName = &quot;Volvo&quot;;
+            </div>
+        </div>
+        <p>In the example below, we create a variable called <code class="w3-codespan">carName</code> and assign the
+            value
+            &quot;Volvo&quot; to it.</p>
+        <p>Then we &quot;output&quot; the value inside an HTML paragraph with id=&quot;demo&quot;:</p>
+
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code notranslate htmlHigh">
+                &lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;<br><br>&lt;script&gt;<br>
+                let carName = "Volvo";<br>
+                document.getElementById(&quot;demo&quot;).innerHTML = carName; <br>&lt;/script&gt;</div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+
+        <div class="note" style="height: fit-content;">
+            <h3>Note</h3>
+            <p>It's a good programming practice to declare all variables at the beginning of a script.</p>
+        </div>
+
+        <hr>
+        <h3>One Statement, Many Variables</h3>
+        <p>You can declare many variables in one statement.</p>
+        <p>Start the statement
+            with <code class="w3-codespan">var</code> and separate the variables by <strong>comma</strong>:</p>
+
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                let person = &quot;John Doe&quot;, carName = &quot;Volvo&quot;, price = 300;
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+
+        <p>A declaration can span multiple lines: </p>
+
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                let person = &quot;John Doe&quot;,<br>
+                carName = &quot;Volvo&quot;,<br>
+                price = 300;
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <hr>
+
+        <h3>Value = undefined</h3>
+        <p>In computer programs, variables are often declared without a value. The value
+            can be something that has to be calculated, or something that will be provided
+            later, like user input.</p>
+        <p>A variable declared without a value will have the value <code class="w3-codespan">
+        undefined</code>.</p>
+        <p>The variable carName will have the value <code class="w3-codespan">undefined</code> after the execution of
+            this statement:</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                let carName;
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <hr>
+
+        <h3>Re-Declaring JavaScript Variables</h3>
+        <p>If you re-declare a JavaScript variable declared with <code class="w3-codespan">var</code>, it will not lose
+            its value.</p>
+        <p>The variable <code class="w3-codespan">carName</code> will still have the value &quot;Volvo&quot; after the
+            execution of these statements:</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                var carName = "Volvo";<br>
+                var carName;
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+        <div class="w3-note">
+            <h3>Note</h3>
+            <p>You cannot re-declare a variable declared with <code class="w3-codespan">let</code> or <code
+                    class="w3-codespan">const</code>.</p>
+            <p>This will not work:</p>
+            <div class="w3-code " style="border-style: none;">
+                let carName = "Volvo";<br>
+                let carName;
+            </div>
+        </div>
+        <hr>
+
+        <h3>JavaScript Arithmetic</h3>
+        <p>As with algebra, you can do arithmetic with JavaScript variables, using
+            operators like <code class="w3-codespan">=</code> and <code class="w3-codespan">+</code>: </p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                let x = 5 + 3 + 3;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+
+        <p>You can also add strings, but strings will be concatenated:</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                let x = &quot;John&quot; + &quot; &quot; + &quot;Doe&quot;;</div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+
+        <p>Also try this:</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                let x = &quot;5&quot; + 3 + 3;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+
+        <div class="note" style="height: fit-content; ">
+            <h3>Note</h3>
+            <p>If you put a number in quotes, the rest of the numbers will be treated as strings, and concatenated.</p>
+        </div>
+
+        <p>Now try this:</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                let x = 3 + 3 + &quot;5&quot;;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+
+        <hr>
+        <h3>JavaScript Dollar Sign $</h3>
+
+        <p>Since JavaScript treats a dollar sign as a letter, identifiers containing $ are valid variable names:</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                let $ = "Hello World";<br>
+                let $$$ = 3;<br>
+                let $myMoney = 5;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+
+        <p>Using the dollar sign is not very common in JavaScript,
+            but professional programmers often use it
+            as an alias for the main function in a JavaScript library.</p>
+        <p>In the JavaScript library jQuery, for instance, the main function
+            <code class="w3-codespan">$</code> is used to select HTML elements.
+            In jQuery <code class="w3-codespan">$("p");</code> means "select all p elements".
+        </p>
+        <hr>
+        <h3>JavaScript Underscore (_)</h3>
+        <p>
+        <p>Since JavaScript treats underscore as a letter, identifiers containing _ are valid variable names:</p>
+        <div class="w3-example" style="height: fit-content;">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                let _lastName = "Johnson";<br>
+                let _x = 3;<br>
+                let _100 = 5;<br>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code
+                editor
+                &raquo;</a>
+        </div>
+
+        <p>Using the underscore is not very common in JavaScript,
+
+            but a convention among professional programmers is to use it as an alias for
+            "private (hidden)" variables.</p>
+
+
+    </div>
+</body>
+
+</html>

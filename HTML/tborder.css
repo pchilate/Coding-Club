@@ -1,0 +1,29 @@
+.content .table1,
+td {
+  border: 1px solid black;
+}
+.content .table4 td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  background-color: #96d4d4;
+}
+
+.content .table5 {
+  border: 1px solid black;
+}
+.content > .table5 td {
+  border-radius: 10px;
+}
+
+.content > #table6 td {
+  border-radius: 10px;
+}
+
+.content > .table7 td {
+  border-width: 2px;
+  border-style: dotted;
+}
+
+.content > #table8 td {
+  border-color: brown;
+}

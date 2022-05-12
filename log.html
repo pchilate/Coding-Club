@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-In and Sign-out</title>
+    <link rel="stylesheet" href="logstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Bungee&family=Kalam:wght@300&family=Luxurious+Roman&family=Press+Start+2P&family=Saira+Condensed:wght@900&family=Vujahday+Script&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Bungee&family=Caveat:wght@700&family=Kalam:wght@300&family=Luxurious+Roman&family=Press+Start+2P&family=Rock+Salt&family=Saira+Condensed:wght@900&family=Ubuntu&family=Vujahday+Script&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="signin-signup">
+                <form action="Main.html" class="signin-form" onsubmit="return validateForm()">
+                    <h2 class="title">Sign in</h2>
+                    <div class="input-field">
+                        <i class="bi bi-person-fill"></i>
+                        <input type="text" placeholder="Username" id="username">
+
+                    </div>
+                    <div class="input-field">
+                        <i class="bi bi-lock-fill"></i>
+                        <input type="password" placeholder="Password" id="password">
+
+
+                    </div>
+                    <input type="submit" class="btn solid" value="Login">
+                    <p class="social-text">or sign in with social platform</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="panels-container">
+                <div class="panel left-panel">
+                    <div class="content">
+                        <h3>Hey Dreamer!</h3>
+                        <p>
+                            Are you a beginer in coding? then join us coding club provides fundamentals tutorials on
+                            different technologies that one would definately need to start their career in coding.
+                        </p>
+                    </div>
+                    <img src="images/undraw_working_remotely_jh40.svg" alt="" class="image">
+                </div>
+
+            </div>
+        </div>
+        <script src="log.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+.content h2 {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.w3-bar a {
+  background-color: #000000;
+  border-radius: 5px;
+  color: aqua;
+}
+
+.w3-example {
+  background-color: rgb(140, 196, 189);
+  color: #000000;
+  height: 480px;
+  border-radius: 5px;
+}
+.w3-example h3 {
+  margin: 20px 10px 20px;
+}
+
+.w3-example .w3-code {
+  margin: 30px 25px 25px 30px;
+  background-color: black;
+  color: white;
+  border: none;
+}
+.w3-example a {
+  margin: 4px 15px 25px 30px;
+  background-color: black;
+  color: aqua;
+  border-radius: 5px;
+}
+
+.content .table {
+  border-collapse: collapse;
+  background-color: black;
+  color: aqua;
+}
+
+.content .table th {
+  background-color: aqua;
+  color: #000000;
+}
+
+.note,
+.Tip {
+  height: 80px;
+  padding: 25px 20px;
+  background-color: #e9f79f;
+}
+
+@media screen and (max-width: 540px) {
+  .content .note,
+  .Tip {
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .w3-example a {
+    height: fit-content;
+  }
+}

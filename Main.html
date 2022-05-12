@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Club </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main_nav.css">
+    <link rel="stylesheet" href="main_content.css">
+    <script src="log.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Bungee&family=Kalam:wght@300&family=Luxurious+Roman&family=Press+Start+2P&family=Saira+Condensed:wght@900&family=Vujahday+Script&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Bungee&family=Kalam:wght@300&family=Luxurious+Roman&family=Press+Start+2P&family=Saira+Condensed:wght@900&family=Ubuntu&family=Vujahday+Script&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Bungee&family=Kalam:wght@300&family=Luxurious+Roman&family=Press+Start+2P&family=Rock+Salt&family=Saira+Condensed:wght@900&family=Ubuntu&family=Vujahday+Script&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Bungee&family=Caveat:wght@700&family=Kalam:wght@300&family=Luxurious+Roman&family=Press+Start+2P&family=Rock+Salt&family=Saira+Condensed:wght@900&family=Ubuntu&family=Vujahday+Script&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="#">
+                <h1>CODING CLUB</h1>
+            </a>
+            <button class="navbar-toggler navbar-light" style="color: black;" type="button" data-bs-toggle="collapse"
+                data-bs-target="#Mynavbar" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="Mynavbar">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item  ">
+                        <a class="btn btn-lg " href="#" role="button" data-bs-toggle="modal" data-bs-target="#Tutorials"
+                            aria-expanded="false">
+                            Tutorials
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-lg " href="#" role="button" data-bs-toggle="modal"
+                            data-bs-target="#References" aria-expanded="false">
+                            references
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-lg " href="#" role="button" data-bs-toggle="modal" data-bs-target="#Exercises"
+                            aria-expanded="false">
+                            Exercises
+                        </a>
+
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav ">
+                    <li class=" nav-item gap-2">
+                        <a class=" btn btn-lg" href="#" role="button">Paid Courses</a>
+                        <a class="btn  btn-lg " style="background-color: black; color: aqua;" href="#" role="button"
+                            onclick="login()">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Modal for Tutorials -->
+    <div class="modal fade" id="Tutorials" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="staticBackdropLabel">Tutorials</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <h3>HTML and CSS</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="HTML/default.html">Learn HTML</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="CSS/css_intro.html">Learn CSS</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn RWD</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Bootstrap</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Colors</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Icons</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Graphics</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn SVG</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn How To</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h3>Javascript</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="Javascript/javascript_intro.html">Learn
+                                            Javascript</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn jquery</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn React</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn AngularJS</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn JSON</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn AJAX</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h3>Server Side</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn SQL</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn MYSQL</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn PHP</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn ASP</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Node.js</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn GIT</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn AWS Cloud</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h3>Programming</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="Python/Python_intro.html">Learn Python</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Java</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn C++</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn C#</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn R</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn kotlin</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn GO</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h3>Data Analytics</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn AI</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Machine Learning</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Data Science</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn NumPy</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Pandans</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn SciPy</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Matplotlib</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Statistics</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Excel</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Google Sheets</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h3>XML Tutorials</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XML</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XML AJAX</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XML DOM</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XML DTD</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XML Schema</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XSLT</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XPath</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XQuery</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <!-- Modal for References -->
+    <div class="modal fade" id="References" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="staticBackdropLabel">Refernces</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <h3>HTML</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Tag Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Browser Support</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Event Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Color Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Attribute Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML SVG Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Google Maps Reference</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h3>Javascript</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">JavaScript Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML DOM Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">jQuery Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#"> AngularJS Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">AppML Reference</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h3>Server Side</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">SQL Referenece</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">MySQL Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">PHP Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">ASP Reference</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h3>CSS</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">CSS References</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">CSS Browser support</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">CSS Selector Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Icon Reference</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h3>Programming</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Python Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Java Reference</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal for Exercises -->
+    <div class="modal fade" id="Exercises" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="staticBackdropLabel">Exercises and Quizzes</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <h3>Exercises</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item"
+                                            href="https://www.w3schools.com/html/exercise.asp">HTML Exercises</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="https://www.w3schools.com/css/exercise.asp">CSS
+                                            Exercises</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">JavaScript Exercises</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">SQL/MySQL Exercises</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Python Exercises</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">C++ Exercises</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h3>Quizzes</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item"
+                                            href="https://www.w3schools.com/quiztest/quiztest.asp?qtest=HTML">HTML
+                                            Quiz</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item"
+                                            href="https://www.w3schools.com/quiztest/quiztest.asp?qtest=CSS">CSS
+                                            Quiz</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">JavaScript Quiz</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">SQL/MySQL Quiz</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Python Quiz</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">C++ Quiz</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h3>Courses</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Course</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">CSS Course</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">JavaScript Course</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Front End Course</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">SQL Course</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">PHP Course</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Python Course</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" id="main-div1">
+            <div class="col-lg-12">
+                <h1>Learn to Code</h1>
+                <p>With World's Largets Web Developer site</p>
+                <h4
+                    style="font-family: 'Caveat', cursive; text-align:center; font-size: 30px; color: rgb(160, 20, 20);">
+                    “Whether you want to
+                    uncover the secrets
+                    of the universe, or you just want to pursue a career in the
+                    21st century, basic computer programming is an essential skill to learn.”
+
+                    - Stephen Hawking</h4>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" id="main-div2">
+            <div class="col-lg-6">
+                <h1>HTML</h1>
+                <p>The language for bulding web pages</p>
+                <h4><a class="btn " href="HTML/default.html">Learn HTML</a></h4>
+                <h4><a class="btn" style="margin-top: 10px;" href="">HTML Reference</a></h4>
+            </div>
+            <div class="col-lg-6">
+                <div class="card ">
+                    <div class="card-body">
+                        <h5 class="card-title">HTML Example:</h5>
+                    </div>
+                    <div id="HTML-EX">
+                        &lt;!DOCTYPE html&gt;<br>
+                        &lt;html&gt;<br>
+                        &lt;title&gt;HTML Tutorial&lt;/title&gt;<br>
+                        &lt;body&gt;<br><br>
+                        &lt;h1&gt;This is a heading&lt;/h1&gt;<br>
+                        &lt;p&gt;This is a paragraph.&lt;/p&gt;<br><br>
+                        &lt;/body&gt;<br>
+                        &lt;/html&gt;
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" id="main-div3">
+            <div class="col-lg-6">
+                <h1>CSS</h1>
+                <p>The language for styling web pages</p>
+                <h4><a class="btn " href="CSS/css_intro.html">Learn CSS</a></h4>
+                <h4><a class="btn" style="margin-top: 10px;" href="">CSS Reference</a></h4>
+            </div>
+            <div class="col-lg-6">
+                <div class="card ">
+                    <div class="card-body">
+                        <h5 class="card-title">CSS Example:</h5>
+                    </div>
+                    <div id="CSS-EX">
+                        body {<br>
+                        &nbsp; background-color: lightblue;<br>}<br><br>
+                        h1 {<br>
+                        &nbsp; color: white;<br>
+                        &nbsp; text-align: center;<br>}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" id="main-div4">
+            <div class="col-lg-6">
+                <h1>Javascript</h1>
+                <p>The language for Programming web pages</p>
+                <h4><a class="btn " href="Javascript/javascript_intro.html">Learn Javascript</a></h4>
+                <h4><a class="btn" style="margin-top: 10px;" href="">Javascript Reference</a></h4>
+            </div>
+            <div class="col-lg-6">
+                <div class="card ">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: black;">Javascript Example:</h5>
+                    </div>
+                    <div id="Javascript-EX">
+                        &lt;button onclick=&quot;myFunction()&quot;&gt;Click Me!&lt;/button&gt;<br><br>
+                        &lt;script&gt;<br>
+                        function myFunction() {<br>
+                        &nbsp; let x = document.getElementById(&quot;demo&quot;);<br>
+                        &nbsp; x.style.fontSize = &quot;25px&quot;; <br>
+                        &nbsp; x.style.color = &quot;red&quot;; <br>}<br>
+                        &lt;/script&gt;
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" id="main-div5">
+            <div class="col-lg-6">
+                <h1>Python</h1>
+                <p>A Popular Programming Language</p>
+                <h4><a class="btn " href="Python/Python_intro.html">Learn Python</a></h4>
+                <h4><a class="btn" style="margin-top: 10px;" href="">Python Reference</a></h4>
+            </div>
+            <div class="col-lg-6">
+                <div class="card ">
+                    <div class="card-body">
+                        <h5 class="card-title">Python Example:</h5>
+                    </div>
+                    <div id="Python-EX">
+                        if 5 &gt; 2:<br>&nbsp; print("Five is greater than two!")
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" id="main-div6">
+            <div class="col-lg-6">
+                <h1>SQL</h1>
+                <p>A Language for accessing databases</p>
+                <h4><a class="btn " href="">Learn SQL</a></h4>
+                <h4><a class="btn" style="margin-top: 10px;" href="">SQL Reference</a></h4>
+            </div>
+            <div class="col-lg-6">
+                <div class="card ">
+                    <div class="card-body">
+                        <h5 class="card-title">SQL Example:</h5>
+                    </div>
+                    <div id="SQL-EX">
+                        SELECT * FROM Customers<br>
+                        WHERE Country='Mexico';
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" id="main-div7">
+            <div class="col-lg-6">
+                <div class="card " id="div1">
+                    <div class="card-body">
+                        <h2 class=" card-title">PHP</h2>
+                        <p>A Web Server Programming language</p>
+                        <h4><a class="btn" href="">Learn PHP</a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card " id="div2">
+                    <div class="card-body">
+                        <h2 class="card-title">jQuery</h2>
+                        <p>A JS library for developing web pages</p>
+                        <h4><a class="btn" href="">Learn jQuery</a></h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" id="main-div8">
+            <div class="col-lg-6">
+                <div class="card " id="div1">
+                    <div class="card-body">
+                        <h2 class="card-title">Java</h2>
+                        <p>A Programming language</p>
+                        <h4><a class="btn" href="">Learn Java</a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card " id="div2">
+                    <div class="card-body">
+                        <h2 class="card-title">C++</h2>
+                        <p>A Programming language</p>
+                        <h4><a class="btn" href="">Learn C++</a></h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" id="main-div9">
+            <div class="col-lg-6">
+                <div class="card " id="div1">
+                    <div class="card-body">
+                        <h2 class="card-title">C#</h2>
+                        <p>A Programming language</p>
+                        <h4><a class="btn" href="">Learn C#</a></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card " id="div2">
+                    <div class="card-body">
+                        <h2 class="card-title">Bootstrap</h2>
+                        <p>A CSS framework for designing better web pages</p>
+                        <h4><a class="btn" href="">Learn Bootstrap</a></h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" id="color-picker">
+            <div class="col-lg-12">
+                <h1>Color Picker</h1>
+                <p>W3Schools' color picker</p>
+                <h4 style="margin-top: 25px;">
+                    <form action="https://www.w3schools.com/colors/colors_picker.asp" target="_blank"><input
+                            type="image" src="images/colorpicker.png" width="150px" height="120px"></form>
+                </h4>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" id="code-game">
+            <div class="col-lg-12">
+                <h1>Code Game</h1>
+                <p>Help The Lynx Collect Pine Cones</p>
+                <h4 style="margin-top: 25px;">
+                    <form action="https://www.w3schools.com/codegame/index.html" target="_blank"><input type="image"
+                            src="images/w3lynx_200.png" width="115px" height="200px"></form>
+                </h4>
+                <h4 style="margin-top: 30px;"><a class="btn" href="https://www.w3schools.com/codegame/index.html"
+                        target="_blank">Play
+                        Game</a></h4>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" id="Exq">
+            <div class="col-lg-12">
+                <h1>Exercises and Quizzes</h1>
+                <p>Test Your Skills!</p>
+                <h4><a class="btn" href="" style="background-color: rgb(109, 248, 109);">Exercise</a>
+                    <a class="btn" href="" style="background-color: rgb(248, 213, 97);">Quizzes</a>
+                </h4>
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" id="footer">
+            <div class="col-lg-12">
+                <footer>
+                    <h4>
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-linkedin"></i>
+                        <i class="bi bi-twitter"></i>
+                    </h4>
+                    <p>Coding Club is optimized for learning, testing, and training. Examples might be simplified to
+                        improve
+                        reading and basic understanding. Tutorials, references, and examples are constantly reviewed
+                        to
+                        avoid errors, but we cannot warrant full correctness of all content. While using this site,
+                        you
+                        agree to have read and accepted our <ins>terms of use, cookie and privacy policy.
+                            Copyright</ins> by Pratik chilate. <ins> All Rights Reserved.</ins></p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

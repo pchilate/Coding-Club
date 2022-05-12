@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  background-color: gray;
+}
+.navbar {
+  background-color: aqua;
+  color: black;
+}
+.navbar a {
+  color: black;
+}
+.navbar-nav .nav-link {
+  font-size: 25px;
+  margin-right: 20px;
+}
+.navbar-nav a:hover {
+  background-color: black;
+  color: aqua;
+}
+
+.navbar-nav .btn {
+  border-radius: 60px;
+  margin-right: 5px;
+}
+
+.navbar-brand h1 {
+  font-family: "Saira Condensed", sans-serif;
+}
+.modal-body li {
+  list-style-type: none;
+}
+
+.modal-header h2 {
+  font-weight: bold;
+}
+.modal-body li a {
+  color: black;
+  font-weight: bold;
+}
+.modal .modal-header,
+.modal-body {
+  background-color: gray;
+  color: aliceblue;
+}
+
+.modal-body li a:hover {
+  background-color: black;
+  color: aliceblue;
+}
+.navbar-toggler .navbar-toggler-icon {
+  color: black;
+}

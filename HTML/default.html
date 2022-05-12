@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Introduction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Bungee&family=Kalam:wght@300&family=Luxurious+Roman&family=Press+Start+2P&family=Saira+Condensed:wght@900&family=Vujahday+Script&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Bungee&family=Kalam:wght@300&family=Luxurious+Roman&family=Press+Start+2P&family=Saira+Condensed:wght@900&family=Ubuntu&family=Vujahday+Script&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../main_nav.css">
+    <link rel="stylesheet" href="html_content.css">
+    <link rel="stylesheet" href="intro_content.css">
+    <script src="log.js"></script>
+
+
+
+    <script>
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        // function myFunction() {
+        //     var x = document.getElementById("myTopnav");
+        //     var y = document.getElementById("mySidenav");
+        //     if (x.className === "topnav" && y.className === "sidenav") {
+        //         x.className += " responsive";
+        //         y.className += " responsive";
+        //     } else {
+        //         x.className = "topnav";
+        //         y.className = "sidenav";
+        //     }
+        // }
+
+
+        // function openNav() {
+        //     document.getElementById("mySidenav").style.width = "250px";
+        // }
+
+        // function closeNav() {
+        //     document.getElementById("mySidenav").style.width = "0";
+        // }
+
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.getElementById("myTopnav").style.marginLeft = "250px";
+            document.getElementById("Content").style.marginLeft = "270px";
+            document.getElementById("Content").style.marginTop = "20px";
+
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.getElementById("myTopnav").style.marginLeft = "0";
+            document.getElementById("Content").style.marginLeft = "20px";
+            document.getElementById("Content").style.marginTop = "20px";
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg " id="main">
+        <div class="container-fluid ">
+            <a class="navbar-brand" href="../Main.html">
+                <h1>CODING CLUB</h1>
+            </a>
+            <button class="navbar-toggler navbar-light" style="color: black;" type="button" data-bs-toggle="collapse"
+                data-bs-target="#Mynavbar" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="Mynavbar">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item  ">
+                        <a class="btn btn-lg " href="#" role="button" data-bs-toggle="modal" data-bs-target="#Tutorials"
+                            aria-expanded="false">
+                            Tutorials
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-lg " href="#" role="button" data-bs-toggle="modal"
+                            data-bs-target="#References" aria-expanded="false">
+                            references
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-lg " href="#" role="button" data-bs-toggle="modal" data-bs-target="#Exercises"
+                            aria-expanded="false">
+                            Exercises
+                        </a>
+
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav ">
+                    <li class=" nav-item gap-2">
+                        <a class=" btn btn-lg" href="#" role="button">Paid Courses</a>
+                        <a class="btn  btn-lg " style="background-color: black; color: aqua;" href="#"
+                            role="button">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Modal for Tutorials -->
+    <div class="modal fade" id="Tutorials" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="staticBackdropLabel">Tutorials</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <h3>HTML and CSS</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="default.html">Learn HTML</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="../CSS/css_intro.html">Learn CSS</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn RWD</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Bootstrap</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Colors</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Icons</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Graphics</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn SVG</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn How To</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h3>Javascript</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="../Javascript/javascript_intro.html">Learn
+                                            Javascript</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn jquery</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn React</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn AngularJS</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn JSON</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn AJAX</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h3>Server Side</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn SQL</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn MYSQL</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn PHP</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn ASP</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Node.js</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn GIT</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn AWS Cloud</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h3>Programming</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="../Python/Python_intro.html">Learn Python</a>
+
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Java</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn C++</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn C#</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn R</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn kotlin</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn GO</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h3>Data Analytics</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn AI</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Machine Learning</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Data Science</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn NumPy</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Pandans</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn SciPy</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Matplotlib</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Statistics</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Excel</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn Google Sheets</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h3>XML Tutorials</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XML</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XML AJAX</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XML DOM</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XML DTD</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XML Schema</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XSLT </a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XPath</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Learn XQuery</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <!-- Modal for References -->
+    <div class="modal fade" id="References" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="staticBackdropLabel">References</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <h3>HTML</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Tag Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Browser Support</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Event Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Color Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Attribute Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML SVG Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Google Maps Reference</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h3>Javascript</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">JavaScript Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML DOM Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">jQuery Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#"> AngularJS Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">AppML Reference</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h3>Server Side</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">SQL Referenece</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">MySQL Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">PHP Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">ASP Reference</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h3>CSS</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">CSS References</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">CSS Browser support</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">CSS Selector Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Icon Reference</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h3>Programming</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Python Reference</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Java Reference</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Modal for Exercises -->
+    <div class="modal fade" id="Exercises" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="staticBackdropLabel">Exercises and Quizzes</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <h3>Exercises</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Exercises</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">CSS Exercises</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">JavaScript Exercises</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">SQL/MySQL Exercises</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Python Exercises</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">C++ Exercises</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h3>Quizzes</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Quiz</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">CSS Quiz</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">JavaScript Quiz</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">SQL/MySQL Quiz</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Python Quiz</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">C++ Quiz</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 ">
+                                <h3>Courses</h3>
+                                <ul>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">HTML Course</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">CSS Course</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">JavaScript Course</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Front End Course</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">SQL Course</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">PHP Course</a>
+                                    </li>
+                                    <li>
+                                        <a class=" dropdown-item" href="#">Python Course</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="topnav  " id="myTopnav">
+        <a href="javascript:void(0);" class="icon" onclick="openNav()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <div id="div1">
+            <a href="../Main.html"><i class="fa fa-home"></i></a>
+            <a class="active" href="default.html">HTML</a>
+            <a href="../CSS/css_intro.html">CSS</a>
+
+            <a href="../Javascript/javascript_intro.html">Javascript</a>
+        </div>
+        <div id="div2">
+            <a href="#about">SQL</a>
+            <a href="../Python/Python_intro.html">Python</a>
+            <a href="#about">PHP</a>
+        </div>
+        <div id="div3">
+            <a href="#about">Bootstrap</a>
+            <a href="#about">Java</a>
+            <a href="#about">jQuery</a>
+            <a href="#about">C++</a>
+        </div>
+
+    </div>
+    <!-- The side navigation -->
+    <div class="sidenav" id="mySidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <h3>HTML Tutorial</h3>
+        <a class="active" href="default.html">HTML Introduction</a>
+        <a href="editor.html">HTML Editors</a>
+        <a href="basic.html">HTML Basic</a>
+        <a href="elements.html">HTML Elements</a>
+        <a href="Attribute.html">HTML Attributes</a>
+        <a href="headings.html">HTML Headings</a>
+        <a href="paragraph.html">HTML Paragraphs</a>
+        <a href="style.html">HTML Styles</a>
+        <a href="formatting.html">HTML Formatting</a>
+        <a href="comments.html">HTML Comments</a>
+        <a href="link.html">HTML Links</a>
+        <a href="colorlink.html">Link Colors</a>
+        <a href="bookmarklink.html">Link Bookmarks</a>
+        <a href="images.html">HTML Images</a>
+        <a href="table.html">HTML Tables</a>
+        <a href="tborder.html">Table Borders</a>
+        <a href="tsize.html">Table Sizes</a>
+        <a href="theader.html">Table Headers</a>
+        <a href="padsp.html">Padding & Spacing</a>
+        <a href="colrow.html">Colspan & Rowspan</a>
+        <a href="tstyle.html">Table Styling</a>
+        <a href="tgroup.html">Table Group</a>
+        <a href="list.html">HTML Lists</a>
+        <a href="unlist.html">Unorder Lists</a>
+        <a href="olist.html">Order Lists</a>
+        <a href="otherlist.html">Other Lists</a>
+        <a href="block&inline.html">HTML Block & Inline</a>
+        <a href="classes.html">HTML Classes</a>
+        <a href="id.html">HTML Id</a>
+        <a href="iframe.html">HTML Iframes</a>
+        <a href="filepath.html">HTML File Paths</a>
+        <a href="head.html">HTML Head</a>
+        <a href="layout.html">HTML Layout</a>
+        <a href="response.html">HTML Responsive</a>
+        <a href="semantic.html">HTML Semantics</a>
+        <a href="entities.html">HTML Entities</a>
+        <a href="symbols.html">HTML Symbols</a>
+        <a href="emojis.html">HTML Emojis</a>
+        <a href="svg.html">HTML SVG</a>
+        <a href="media.html">HTML Media</a>
+        <a href="video.html">HTML Video</a>
+        <a href="audio.html">HTML Audio</a>
+        <a href="youtube.html">HTML Youtube</a>
+        <h3>HTML Forms</h3>
+        <a href="forms.html">HTML Forms</a>
+        <a href="formatt.html">HTML Form Attribute</a>
+        <a href="formele.html">HTML Form Elements</a>
+        <a href="inputtype.html">HTML Input Types</a>
+        <a href="inputatt.html">HTML Input Attributes</a>
+        <a href="inputformatt.html">HTML Input Form Attributes</a>
+        <h3>HTML Example</h3>
+        <a href="#about">HTML Exercise</a>
+        <a href="#about">HTML Quiz</a>
+    </div>
+    <!-- page content -->
+    <div class="content w3-container" id="Content">
+        <h2>HTML Introduction</h2>
+        <div class="w3-bar">
+            <a class="w3-button w3-left w3-hover-aqua " href="../Main.html">&laquo; Home</a>
+            <a class="w3-button w3-right  w3-hover-aqua" href="editor.html">Next &raquo;</a>
+        </div>
+        <hr>
+        <p>HTML is the standard markup language for creating Web pages.</p>
+        <hr>
+        <h3>What is HTML?</h3>
+        <ul>
+            <li> stands for Hyper Text Markup Language</li>
+            <li> HTML is the standard markup language for creating Web pages</li>
+            <li>HTML describes the structure of a Web page</li>
+            <li>HTML consists of a series of elements</li>
+            <li>HTML elements tell the browser how to display the content</li>
+            <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a
+                link",
+                etc.</li>
+        </ul>
+        <hr>
+        <h3>A Simple HTML Document</h3>
+        <div class="w3-example">
+            <h3>Example</h3>
+            <div class="w3-code ">
+                <span style="color: blue;">&lt;</span>
+                <span style="color: brown;">!DOCTYPE html</span>
+                <span style="color: blue;">&gt;</span><br>
+                <span style="color: blue;">&lt;</span>
+                <span style="color: brown;">html</span>
+                <span style="color: blue;">&gt;</span><br>
+                <span style="color: blue;">&lt;</span>
+                <span style="color: brown;">head</span>
+                <span style="color: blue;">&gt;</span><br>
+                <span style="color: blue;">&lt;</span>
+                <span style="color: brown;">title</span>
+                <span style="color: blue;">&gt;</span>
+                Page Title
+                <span style="color: blue;">&lt;</span>
+                <span style="color: brown;">/title</span>
+                <span style="color: blue;">&gt;</span><br>
+                <span style="color: blue;">&lt;</span>
+                <span style="color: brown;">/head</span>
+                <span style="color: blue;">&gt;</span><br>
+                <span style="color: blue;">&lt;</span>
+                <span style="color: brown;">body</span>
+                <span style="color: blue;">&gt;</span><br><br>
+                <span style="color: blue;">&lt;</span>
+                <span style="color: brown;">h1</span>
+                <span style="color: blue;">&gt;</span>
+                My First Heading
+                <span style="color: blue;">&lt;</span>
+                <span style="color: brown;">/h1</span>
+                <span style="color: blue;">&gt;</span><br>
+                <span style="color: blue;">&lt;</span>
+                <span style="color: brown;">p</span>
+                <span style="color: blue;">&gt;</span>
+                My first paragraph.
+                <span style="color: blue;">&lt;</span>
+                <span style="color: brown;">/p</span>
+                <span style="color: blue;">&gt;</span><br><br>
+                <span style="color: blue;">&lt;</span>
+                <span style="color: brown;">/body</span>
+                <span style="color: blue;">&gt;</span><br>
+                <span style="color: blue;">&lt;</span>
+                <span style="color: brown;">/html</span>
+                <span style="color: blue;">&gt;</span>
+            </div>
+            <a target="_blank" href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello"
+                class="w3-btn ">code editor
+                &raquo;</a>
+        </div>
+        <hr>
+        <h3>Example Explained</h3>
+        <ul>
+            <li>The <code class="w3-codespan">&lt;!DOCTYPE html&gt;</code> declaration defines
+                that this document is an HTML5 document</li>
+            <li>The <code class="w3-codespan">&lt;html&gt;</code> element is the root element of an HTML
+                page</li>
+            <li>The <code class="w3-codespan">&lt;head&gt;</code> element contains meta information about the
+                HTML page</li>
+            <li>The <code class="w3-codespan">&lt;title&gt;</code> element specifies a title for the
+                HTML page (which is shown in the browser's title bar or in the page's tab)</li>
+            <li>The <code class="w3-codespan">&lt;body&gt;</code> element defines the
+                document's body, and is a container for all the visible contents, such as
+                headings, paragraphs, images, hyperlinks, tables, lists, etc.</li>
+            <li>The <code class="w3-codespan">&lt;h1&gt;</code> element defines a large heading</li>
+            <li>The <code class="w3-codespan">&lt;p&gt;</code> element defines a paragraph</li>
+        </ul>
+        <hr>
+        <h3>What is an HTML Element?</h3>
+        <p>An HTML element is defined by a start tag, some content, and an end tag:</p>
+        <div style="font-size:20px;padding:10px;margin-bottom:10px;">
+            <span style="color: blue;">&lt;</span>
+            <span style="color: brown;">tagname</span>
+            <span style="color: blue;">&gt;</span>
+            Content goes here...
+            <span style="color: blue;">&lt;</span>
+            <span style="color: brown;">/tagname</span>
+            <span style="color: blue;">&gt;</span>
+        </div>
+        <p>The HTML <strong>element</strong> is everything from the start tag to the end tag:</p>
+        <div style="font-size:20px;padding:10px;margin-bottom:10px;">
+            <span style="color: blue;">&lt;</span>
+            <span style="color: brown;">h1</span>
+            <span style="color: blue;">&gt;</span>
+            My First Heading
+            <span style="color: blue;">&lt;</span>
+            <span style="color: brown;">/h1</span>
+            <span style="color: blue;">&gt;</span>
+        </div>
+        <div style="font-size:20px;padding:10px;margin-bottom:10px;">
+            <span style="color: blue;">&lt;</span>
+            <span style="color: brown;">h1</span>
+            <span style="color: blue;">&gt;</span>
+            My First paragraph.
+            <span style="color: blue;">&lt;</span>
+            <span style="color: brown;">/h1</span>
+            <span style="color: blue;">&gt;</span>
+        </div>
+        <table class="table ">
+            <tr>
+                <th>Start tag</th>
+                <th>Element content</th>
+                <th>End tag</th>
+            </tr>
+            <tr>
+                <td>&lt;h1&gt;</td>
+                <td>My First Heading</td>
+                <td>&lt;/h1&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;p&gt;</td>
+                <td>My first paragraph.</td>
+                <td>&lt;/p&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;br&gt;</td>
+                <td><em>none</em></td>
+                <td><em>none</em></td>
+            </tr>
+        </table>
+        <hr>
+        <div class="note">
+            <p><strong>Note:</strong> Some HTML elements have no content (like the &lt;br&gt;
+                element). These elements are called empty elements. Empty elements do not have an end tag!</p>
+        </div>
+        <hr>
+        <h3>Web Browsers</h3>
+        <p>The purpose of a web browser (Chrome, Edge, Firefox, Safari) is to read HTML documents and display them
+            correctly.</p>
+        <p>A browser does not display the HTML tags, but uses them to determine how to display the document:</p>
+        <p><img alt="View in Browser" src="images/img_chrome.png" class="w3-image"></p>
+        <hr>
+        <h3>HTML Page Structure</h3>
+        <p>Below is a visualization of an HTML page structure:</p>
+        <div style="width:99%;border:1px solid grey;padding:3px;margin:0;background-color:#ddd">&lt;html&gt;
+            <div style="width:90%;border:1px solid grey;padding:3px;margin:20px">&lt;head&gt;
+                <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;title&gt;Page
+                    title&lt;/title&gt;
+                </div>
+                &lt;/head&gt;
+            </div>
+            <div style="width:90%;border:1px solid grey;padding:3px;margin:20px;background-color:#ddd">&lt;body&gt;
+                <div style="width:90%;border:1px solid grey;padding:3px;margin:20px;background-color:#fff">
+                    <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;h1&gt;This is a
+                        heading&lt;/h1&gt;</div>
+                    <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;p&gt;This is a
+                        paragraph.&lt;/p&gt;</div>
+                    <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;p&gt;This is another
+                        paragraph.&lt;/p&gt;</div>
+                </div>
+                &lt;/body&gt;
+            </div>
+            &lt;/html&gt;
+
+        </div>
+
+        <div class="note" style="margin-top: 20px;">
+            <p><strong>Note:</strong> The content inside the &lt;body&gt; section (the white area above)
+                will be displayed in a browser. The content inside the &lt;title&gt; element will be
+                shown in the browser's title bar or in the page's tab.</p>
+        </div>
+        <hr>
+        <h3>HTML History</h3>
+        <p>Since the early days of the World Wide Web, there have been many versions of HTML:</p>
+        <table class="table">
+            <tr>
+                <th>Year</th>
+                <th>Version</th>
+            </tr>
+            <tr>
+                <td>1989</td>
+                <td>Tim Berners-Lee invented www</td>
+            </tr>
+            <tr>
+                <td>1991</td>
+                <td>Tim Berners-Lee invented HTML</td>
+            </tr>
+            <tr>
+                <td>1993</td>
+                <td>Dave Raggett drafted HTML+</td>
+            </tr>
+            <tr>
+                <td>1995</td>
+                <td>HTML Working Group defined HTML 2.0</td>
+            </tr>
+            <tr>
+                <td>1997</td>
+                <td>W3C Recommendation: HTML 3.2</td>
+            </tr>
+            <tr>
+                <td>1999</td>
+                <td>W3C Recommendation: HTML 4.01</td>
+            </tr>
+            <tr>
+                <td>2000</td>
+                <td>W3C Recommendation: XHTML 1.0</td>
+            </tr>
+            <tr>
+                <td>2008</td>
+                <td>WHATWG HTML5 First Public Draft</td>
+            </tr>
+            <tr>
+                <td>2012</td>
+                <td><a href="http://whatwg.org/html/" target="_blank">WHATWG HTML5 Living Standard</a></td>
+            </tr>
+            <tr>
+                <td>2014</td>
+                <td><a href="http://www.w3.org/TR/html5/" target="_blank">W3C Recommendation: HTML5</a></td>
+            </tr>
+            <tr>
+                <td>2016</td>
+                <td>W3C Candidate Recommendation: HTML 5.1</td>
+            </tr>
+            <tr>
+                <td>2017</td>
+                <td><a href="http://www.w3.org/TR/html51/" target="_blank">W3C Recommendation: HTML5.1 2nd Edition</a>
+                </td>
+            </tr>
+            <tr>
+                <td>2017</td>
+                <td><a href="http://www.w3.org/TR/html52/" target="_blank">W3C Recommendation: HTML5.2</a></td>
+            </tr>
+        </table>
+
+
+    </div>
+    </div>
+
+
+
+
+    </div>
+
+
+    </div>
+</body>
+
+</html>
